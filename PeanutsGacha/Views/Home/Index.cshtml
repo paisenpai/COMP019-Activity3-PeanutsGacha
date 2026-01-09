@@ -1,0 +1,57 @@
+@model GachaViewModel
+@{
+	ViewData["Title"] = "Peanuts Gachapon";
+}
+
+<h1 class="sr-only">Peanuts Gachapon</h1>
+
+<div class="mockup">
+	<header class="mockup__header">
+		<img class="header-img" src="~/assets/header.png" alt="Header" />
+	</header>
+
+	<section class="mockup__body" aria-label="Gacha layout">
+		<aside class="panel" aria-label="Prize result">
+			<div class="panel__title">you won:</div>
+
+			<div class="panel__content">
+				@if (Model.SelectedPrize is null)
+				{
+					<div class="placeholder">Press the gacha machine to roll.</div>
+				}
+				else
+				{
+					<img class="result-img" src="@Model.SelectedPrize.ImagePath" alt="@Model.SelectedPrize.Name" />
+					<div class="result-name">@Model.SelectedPrize.Name</div>
+				}
+			</div>
+		</aside>
+
+		<main class="center" aria-label="Gacha machine">
+			<form asp-action="Roll" method="post">
+				@Html.AntiForgeryToken()
+				<button type="submit" class="gacha-button" aria-label="Roll gacha">
+					<img class="gacha-img" src="~/assets/gacha.jpg" alt="Gacha machine" />
+				</button>
+			</form>
+		</main>
+
+		<aside class="panel" aria-label="Prize list">
+			<div class="panel__content panel__content--grid">
+				<img class="grid-img" src="~/assets/snoopy.jpg" alt="Snoopy" title="Snoopy" />
+				<img class="grid-img" src="~/assets/snoopy_joecool.jpg" alt="Joe Cool" title="Joe Cool" />
+				<img class="grid-img" src="~/assets/snoopy_flyingace.jpg" alt="Flying Ace" title="Flying Ace" />
+
+				<img class="grid-img" src="~/assets/olaf.jpg" alt="Olaf" title="Olaf" />
+				<img class="grid-img" src="~/assets/spike.jpg" alt="Spike" title="Spike" />
+				<img class="grid-img" src="~/assets/belle.jpg" alt="Belle" title="Belle" />
+
+				<img class="grid-img" src="~/assets/marbles.jpg" alt="Marbles" title="Marbles" />
+				<img class="grid-img" src="~/assets/andy.jpg" alt="Andy" title="Andy" />
+				<img class="grid-img" src="~/assets/woodstock.jpg" alt="Woodstock" title="Woodstock" />
+			</div>
+		</aside>
+	</section>
+
+	<footer class="mockup__footer">made by john gavin deposoy</footer>
+</div>

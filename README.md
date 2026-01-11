@@ -4,7 +4,8 @@
 Peanuts Gachapon Simulator made with ASP.NET Core MVC!
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/63218858-7ce1-4f11-8aa8-9def06e8744f" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c11eeb6c-a368-433b-aa2f-02f0f209deb4" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c052abf4-189f-4b17-9ab1-d0f409acdf71" />
+
 
 ## Requirements
 - .NET 9 SDK
